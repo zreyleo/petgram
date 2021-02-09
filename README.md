@@ -1,3 +1,3 @@
 # Petgram
 
-This project is a practice from the course on Platzi "React Avanzado"
+After to install the node_modules, you need to deploy the api folder(I used vercel)
