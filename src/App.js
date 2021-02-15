@@ -4,7 +4,7 @@ import { GlobalStyle } from './styles/GlobalStyles'
 
 import { Logo } from './components/Logo'
 import { ListOfCategories } from './components/ListOfCategories'
-import { ListOfPhotoCards } from './components/ListOfPhotoCards'
+import { ListOfPhotoCards } from './container/ListOfPhotoCards'
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <GlobalStyle />
       <Logo />
       <ListOfCategories />
-      <ListOfPhotoCards />
+      <ListOfPhotoCards categoryId={1} />
     </div>
   )
 }
