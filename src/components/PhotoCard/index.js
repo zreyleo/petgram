@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from '@reach/router'
 
 import { Article, ImgWrapper, Img } from './styles'
 
@@ -31,15 +32,15 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
       {
         show &&
           <>
-            <a href={`/?detail=${id}`}>
+            <Link to={`/detail/${id}`}>
               <ImgWrapper>
                 <Img src={src} />
               </ImgWrapper>
-            </a>
+            </Link>
             <ToggleLikeMutation>
               {
-                renderProp
-              }
+              renderProp
+            }
             </ToggleLikeMutation>
           </>
       }
