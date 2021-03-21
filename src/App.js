@@ -12,9 +12,7 @@ import { User } from './pages/User'
 import { Favs } from './pages/Favs'
 import { NotRegisteredUser } from './pages/NotRegisteredUser'
 
-const UserLogged = ({ children }) => {
-  return children({ isAuth: true })
-}
+import Context from './Context'
 
 const App = () => {
   return (
@@ -26,7 +24,7 @@ const App = () => {
         <Home path='/pet/:id' />
         <Detail path='/detail/:detailId' />
       </Router>
-      <UserLogged>
+      <Context.Consumer>
         {
           ({ isAuth }) => (
             isAuth
@@ -44,7 +42,7 @@ const App = () => {
                 </Router>
           )
         }
-      </UserLogged>
+      </Context.Consumer>
       <NavBar />
     </div>
   )
