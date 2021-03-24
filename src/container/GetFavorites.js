@@ -16,15 +16,15 @@ const GET_FAVS = gql`
 `
 
 const renderProp = ({ loading, error, data }) => {
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error!</p>
-    const { favs } = data
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error!</p>
+  const { favs } = data
 
-    return <ListOfFavs favs={favs} />
+  return <ListOfFavs favs={favs} />
 }
 
 export const FavsWithQuery = () => (
-    <Query query={GET_FAVS} fetchPolicy='network-only'>
-        {renderProp}
-    </Query>
+  <Query query={GET_FAVS} fetchPolicy='network-only'>
+    {renderProp}
+  </Query>
 )

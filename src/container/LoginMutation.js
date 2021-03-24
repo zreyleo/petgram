@@ -9,7 +9,9 @@ const LOGIN = gql`
 `
 
 export const LoginMutation = ({ children }) => {
-    return <Mutation mutation={LOGIN}>
-        {children}
+  return (
+    <Mutation mutation={LOGIN}>
+      {children}
     </Mutation>
+  )
 }

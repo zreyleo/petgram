@@ -2,7 +2,9 @@ import React, { Fragment } from 'react'
 
 import { useInputValue } from '../../hooks/useInputValue'
 
-import { Form, Input, Button, H2, Error } from './styles'
+import { Form, Input, H2, Error } from './styles'
+
+import { SubmitButton as Button } from '../SubmitButton'
 
 export const UserForm = ({ error, onSubmit, title, disabled }) => {
   const email = useInputValue('')
@@ -14,7 +16,7 @@ export const UserForm = ({ error, onSubmit, title, disabled }) => {
   }
 
   return (
-    <Fragment>
+    <>
       <H2>{title}</H2>
       <Form disabled={disabled} onSubmit={handleSubmit}>
         <Input disabled={disabled} placeholder='Email' {...email} />
@@ -22,6 +24,6 @@ export const UserForm = ({ error, onSubmit, title, disabled }) => {
         <Button disabled={disabled}>{title}</Button>
       </Form>
       {error && <Error>{error}</Error>}
-    </Fragment>
+    </>
   )
 }

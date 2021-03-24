@@ -27,18 +27,18 @@ export const PhotoCard = ({ id, liked, likes = 0, src = DEFAULT_IMAGE }) => {
     <Article ref={element}>
       {
         show &&
-        <>
-          <Link to={`/detail/${id}`}>
-            <ImgWrapper>
-              <Img src={src} />
-            </ImgWrapper>
-          </Link>
-          <ToggleLikeMutation>
-            {
+          <>
+            <Link to={`/detail/${id}`}>
+              <ImgWrapper>
+                <Img src={src} />
+              </ImgWrapper>
+            </Link>
+            <ToggleLikeMutation>
+              {
               renderProp
             }
-          </ToggleLikeMutation>
-        </>
+            </ToggleLikeMutation>
+          </>
       }
     </Article>
   )

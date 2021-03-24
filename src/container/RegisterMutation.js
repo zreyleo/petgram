@@ -9,7 +9,9 @@ const REGISTER = gql`
 `
 
 export const RegisterMutation = ({ children }) => {
-    return <Mutation mutation={REGISTER}>
-        {children}
+  return (
+    <Mutation mutation={REGISTER}>
+      {children}
     </Mutation>
+  )
 }

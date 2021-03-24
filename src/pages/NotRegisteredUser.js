@@ -9,7 +9,7 @@ export const NotRegisteredUser = () => {
   const { activateAuth } = useContext(Context)
 
   return (
-    <Fragment>
+    <>
       <RegisterMutation>
         {(register, { data, loading, error }) => {
           const onSubmit = ({ email, password }) => {
@@ -23,7 +23,7 @@ export const NotRegisteredUser = () => {
 
           const errorMsg = error && 'El usuario ya existe o ocurrio un problema'
 
-          return <UserForm disabled={loading} onSubmit={onSubmit} title="Registrarse" error={errorMsg} />
+          return <UserForm disabled={loading} onSubmit={onSubmit} title='Registrarse' error={errorMsg} />
         }}
       </RegisterMutation>
 
@@ -40,9 +40,9 @@ export const NotRegisteredUser = () => {
 
           const errorMsg = error && 'El usuario no existe o password incorrecto'
 
-          return <UserForm disabled={loading} error={errorMsg} onSubmit={onSubmit} title="Iniciar Sesi&oacute;n" />
+          return <UserForm disabled={loading} error={errorMsg} onSubmit={onSubmit} title='Iniciar Sesi&oacute;n' />
         }}
       </LoginMutation>
-    </Fragment>
+    </>
   )
 }
