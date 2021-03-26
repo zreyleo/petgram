@@ -1,3 +1,5 @@
 # Petgram
 
-After to install the node_modules, you need to deploy the api folder(I used vercel)
+Petgram is an app for photos of pets just for presentation purpose.
+
+To Test it first open a console on project directory and type `npm install` then `npm run dev`
