@@ -18,5 +18,5 @@ const HomePage = ({ id }) => {
 }
 
 export const Home = React.memo(HomePage, (prevProps, nextProps) => {
-  return prevProps.categoryId === nextProps.categoryId
+  return prevProps.categoryId !== nextProps.categoryId
 })

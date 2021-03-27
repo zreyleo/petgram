@@ -1,16 +1,16 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+
+import { Layout } from '../components/Layout'
 import { FavsWithQuery } from '../container/GetFavorites'
 
-export const Favs = () => {
+const Favs = () => {
   return (
     <>
-      <Helmet>
-        <title>PetGram - Tus favoritos</title>
-        <meta name='description' content='Aquí puedes encontrar tus favoritos' />
-      </Helmet>
-      <h1>Favs</h1>
-      <FavsWithQuery />
+      <Layout title='Tus Favoritos' subtitle='Aquí puedes encontrar tus favoritos'>
+        <FavsWithQuery />
+      </Layout>
     </>
   )
 }
+
+export default Favs
